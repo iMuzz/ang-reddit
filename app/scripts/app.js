@@ -12,10 +12,12 @@ angular
   .module('redditApp', [
     'ngAnimate',
     'ngRoute',
-    'ngSanitize'
+    'ngSanitize',
+    'ngResource'
   ])
   .config(function ($routeProvider) {
-    $routeProvider
+      // Configure angular router
+      $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
