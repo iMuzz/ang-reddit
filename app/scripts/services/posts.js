@@ -1,5 +1,8 @@
 'use strict';
+(function () {
 
-angular.module('redditApp').factory('posts', function($resource){
-    return $resource('https://www.reddit.com/r/apple.json', {});
-});
+    angular.module('redditApp').factory('posts', function($resource){
+        return $resource('https://www.reddit.com/r/apple.json', {});
+    });
+
+}());
