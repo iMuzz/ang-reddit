@@ -1,5 +1,13 @@
 // bower:scss
+@import "components-font-awesome/scss/font-awesome.scss";
 // endbower
+
+
+.fn-nav {
+  display: flex;
+  align-items: center;
+  background-color: black;
+}
 
 .browsehappy {
   margin: 0.2em 0;

@@ -10,15 +10,15 @@
  */
 
 (function () {
-    angular
-      .module('redditApp', [
+    var app = angular.module('redditApp', [
         'ngAnimate',
         'ngRoute',
         'ngSanitize',
         'ngResource',
         'ngMaterial'
-      ])
-      .config(function ($routeProvider) {
+      ]);
+
+      app.config(function ($routeProvider) {
           // Configure angular router
           $routeProvider
           .when('/', {
