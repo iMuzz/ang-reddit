@@ -4,7 +4,7 @@
 (function () {
 
     angular.module('redditApp')
-        .controller('NavParCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log) {
+        .controller('MainCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log) {
             $scope.toggleLeft = buildToggler('left');
             /**
              * Build handler to open/close a SideNav; when animation finishes
