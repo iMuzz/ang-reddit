@@ -37,12 +37,12 @@
             <md-content flex>
                 <div layout="column" layout-fill layout-align="top center">
                     <div>
-                        <div class="container">
-                          <!--<div ng-view=""></div>-->
-                        </div>
                         <md-button ng-click="toggleLeft()" class="md-fab fn-nav" aria-label="Eat cake">
                             <md-icon layout="row" layout-align="center center" src="images/bars.svg"><i class="fa fa-bars fa-2x"></i></md-icon>
                         </md-button>
+                        <div class="container">
+                          <div ng-view=""></div>
+                        </div>
                     </div>
                 </div>
                 <div flex></div>
@@ -84,6 +84,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/NavController.js"></script>
+        <script src="scripts/controllers/PostsController.js"></script>
         <script src="scripts/services/posts.js"></script>
         <!-- endbuild -->
 </body>
