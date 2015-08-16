@@ -23,10 +23,10 @@
 
         });
 
-    angular.module('redditApp').controller('NavCtrl', function ($scope, $timeout, $mdSidenav, $log, $location) {
+    angular.module('redditApp').controller('NavCtrl', function ($scope, $timeout, $mdSidenav, $log, $location, constants) {
 
-        $scope.subreddits = ['apple', 'angularjs', 'all', 'programmerhumor', 'android'];
-        
+        $scope.subreddits = constants.defaultSubs;
+
         $scope.goToSubreddit = function(x){
             $location.path('/r/'+x);
         }

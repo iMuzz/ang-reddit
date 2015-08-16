@@ -31,7 +31,8 @@
                     <h1 class="md-toolbar-tools">Reddit</h1>
                 </md-toolbar>
                 <md-content layout="column" ng-controller="NavCtrl">
-                    <div layout="row" layout-align="center center" ng-repeat="sub in subreddits" class="md-button" ng-click="goToSubreddit(sub)">/r/{{sub}}</div>
+                    <md-button layout="row" layout-align="center center" ng-repeat="sub in subreddits" class="md-button" ng-click="goToSubreddit(sub)"> /r/{{sub}}</md-button>
+                    <!--<div layout="row" layout-align="center center" ng-repeat="sub in subreddits" class="md-button" ng-click="goToSubreddit(sub)">/r/{{sub}}</div>-->
                 </md-content>
             </md-sidenav>
 
@@ -82,6 +83,7 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/constants.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/NavController.js"></script>
