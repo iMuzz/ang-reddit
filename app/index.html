@@ -30,7 +30,7 @@
                     <h1 class="md-toolbar-tools">Reddit</h1>
                 </md-toolbar>
                 <md-content layout="column" ng-controller="NavCtrl">
-                    <div layout="row" layout-align="center center" ng-repeat="item in subreddits" class="md-button">{{item}}</div>
+                    <div layout="row" layout-align="center center" ng-repeat="sub in subreddits" class="md-button" ng-click="goToSubreddit(sub)">/r/{{sub}}</div>
                 </md-content>
             </md-sidenav>
 

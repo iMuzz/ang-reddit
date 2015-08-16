@@ -23,9 +23,14 @@
 
         });
 
-    angular.module('redditApp').controller('NavCtrl', function ($scope, $timeout, $mdSidenav, $log) {
+    angular.module('redditApp').controller('NavCtrl', function ($scope, $timeout, $mdSidenav, $log, $location) {
 
-        $scope.subreddits = ['/r/apple', '/r/angularjs', '/r/all', '/r/programmerhumor'];
+        $scope.subreddits = ['apple', 'angularjs', 'all', 'programmerhumor'];
+        
+        $scope.goToSubreddit = function(x){
+            $location.path('/r/'+x);
+        }
+        
         $scope.close = function () {
             $mdSidenav('left').close()
                 .then(function () {

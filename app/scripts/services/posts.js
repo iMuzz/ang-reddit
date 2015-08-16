@@ -3,13 +3,17 @@
 
     angular.module('redditApp').factory('posts', function($http){
 
-        return $http.get('https://www.reddit.com/r/apple.json', {})
-            .then(function(res){
-                return  buildPostObjects(res);
-            })
-            .catch(function(mess){
-                return $q.reject("Something got fucked.");
-            });
+        return getPostsForSub;
+
+        function getPostsForSub(sub){
+            return $http.get('https://www.reddit.com/r/' + sub + '.json', {})
+                .then(function(res){
+                    return  buildPostObjects(res);
+                })
+                .catch(function(mess){
+                    return $q.reject("Something got fucked.");
+                });
+        };
 
         function buildPostObjects(res){
             var postObjects = [];
