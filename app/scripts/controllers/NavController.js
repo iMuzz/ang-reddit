@@ -25,7 +25,7 @@
 
     angular.module('redditApp').controller('NavCtrl', function ($scope, $timeout, $mdSidenav, $log, $location) {
 
-        $scope.subreddits = ['apple', 'angularjs', 'all', 'programmerhumor'];
+        $scope.subreddits = ['apple', 'angularjs', 'all', 'programmerhumor', 'android'];
         
         $scope.goToSubreddit = function(x){
             $location.path('/r/'+x);

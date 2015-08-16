@@ -18,9 +18,14 @@
         'ngMaterial'
       ]);
 
-      app.config(function ($routeProvider) {
+      app.config(function ($routeProvider, $locationProvider) {
           // Configure angular router
           $routeProvider
+          .when('/', {
+              templateUrl: 'views/main.html',
+              controller: 'PostsCtrl',
+              controllerAs: 'posts'
+          })
           .when('/r/', {
             templateUrl: 'views/main.html',
             controller: 'PostsCtrl',
@@ -32,7 +37,9 @@
             controllerAs: 'posts'
           })
           .otherwise({
-            redirectTo: '/r/'
+            redirectTo: '/'
           });
+
+          $locationProvider.html5Mode(true);
       });
 }());
