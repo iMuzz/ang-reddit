@@ -6,10 +6,10 @@
     angular.module('redditApp')
         .controller('PostsCtrl', function ($scope, posts, $routeParams) {
 
-            console.log();
             posts($routeParams.subreddit || "all")
                 .then(function(posts){
                     $scope.posts = posts;
                 });
+        //    TODO: Need to account for when user puts an invalid subreddit
         })
 }());
