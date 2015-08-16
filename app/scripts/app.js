@@ -18,7 +18,8 @@
         'ngMaterial'
       ]);
 
-      app.config(function ($routeProvider, $locationProvider) {
+      app.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
+
           // Configure angular router
           $routeProvider
           .when('/', {
@@ -41,5 +42,10 @@
           });
 
           //$locationProvider.html5Mode(true);
+
+          //Configure Theme
+          $mdThemingProvider.theme('default')
+              //.primaryPalette('pink')
+              .accentPalette('purple')
       });
 }());
