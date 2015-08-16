@@ -32,11 +32,11 @@
                 </md-toolbar>
                 <!-- -->
                 <md-content class="md-padding">
-                    <form ng-submit="$event.preventDefault()" name="searchForm">
+                    <form ng-submit="goToSubreddit(sub)" name="searchForm">
                         <div layout-gt-sm="row">
                             <md-input-container flex>
                                 <label>Enter Subreddit</label>
-                                <input type="text"/>
+                                <input ng-model="sub" type="text"/>
                             </md-input-container>
                         </div>
                     </form>

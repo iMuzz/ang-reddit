@@ -4,8 +4,12 @@
 (function () {
 
     angular.module('redditApp')
-        .controller('MainCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log) {
+        .controller('MainCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log, $location) {
             $scope.toggleLeft = buildToggler('left');
+
+            $scope.goToSubreddit = function(sub){
+                $location.path('/r/'+ sub );
+            };
             /**
              * Build handler to open/close a SideNav; when animation finishes
              * report completion in console
@@ -27,9 +31,9 @@
 
         $scope.subreddits = constants.defaultSubs;
 
-        $scope.goToSubreddit = function(x){
-            $location.path('/r/'+x);
-        }
+        $scope.goToSubreddit = function(sub){
+            $location.path('/r/'+ sub );
+        };
         
         $scope.close = function () {
             $mdSidenav('left').close()
